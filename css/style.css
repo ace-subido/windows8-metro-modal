@@ -25,10 +25,15 @@ input::-moz-focus-inner {
   font-size: 16px;
   line-height: 1.5em;
   border-radius: 0px;
+  font-weight: 700;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in; }
   .mbtn:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
@@ -51,13 +56,25 @@ input::-moz-focus-inner {
 .violet {
   color: #7c40a2;
   border: 3px solid #7c40a2;
-  background-color: #fff;
-  font-weight: 700;
-  -webkit-transition: all 0.1s ease-in;
-  -moz-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in; }
+  background-color: #fff; }
   .violet:hover, .violet:focus {
     background-color: #7c40a2;
+    color: #fff; }
+
+.green {
+  color: #35aa47;
+  border: 3px solid #35aa47;
+  background-color: #fff; }
+  .green:hover, .green:focus {
+    background-color: #35aa47;
+    color: #fff; }
+
+.blue {
+  color: #4d90fe;
+  border: 3px solid #4d90fe;
+  background-color: #fff; }
+  .blue:hover, .blue:focus {
+    background-color: #4d90fe;
     color: #fff; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -122,17 +139,28 @@ h2 {
 
 .wrapper {
   display: block;
-  margin: 40px auto;
   width: 740px;
+  margin: 0 auto;
   *zoom: 1; }
   .wrapper:before, .wrapper:after {
     content: " ";
     display: table; }
   .wrapper:after {
     clear: both; }
+  .wrapper.m-wrapper {
+    margin: 40px auto; }
+  .wrapper .t-center {
+    text-align: center; }
+  .wrapper .t-right {
+    text-align: right; }
+    .wrapper .t-right a {
+      margin-left: 6px; }
 
 .header {
-  text-align: center; }
+  text-align: center;
+  margin: 40px auto 0px; }
+  .header p {
+    margin-bottom: 10px; }
   .header h1 {
     font-weight: 400;
     font-size: 40px;

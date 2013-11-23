@@ -5,23 +5,30 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Windows 8 Modal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" type="text/css" media="screen" href="https://google-code-prettify.googlecode.com/svn/trunk/styles/sunburst.css">
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  
   <link rel="stylesheet" href="css/style.css" type="text/css" />
+
   <link rel="stylesheet" href="css/win8modal.css" type="text/css" />
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
   <script src="js/win8modal.js"></script>  
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </head>
 <body>
   <div class="wrapper header">    
     <h1>CSS3 Windows 8 Modal</h1>
     <p class="sub-head">
-      A simple Windows 8 modal. Click the button below to check it out.
+      A simple Windows 8 modal. Click the 'Open Modal' button below to check it out.
     </p>
-    <button class="mbtn violet" onclick="Win8Modal.show()">
-      Open Modal
-    </button>
+    <p>      
+      <button class="mbtn violet" onclick="Win8Modal.show()">
+        Open Modal
+      </button>      
+    </p>    
   </div>
   <div class="wrapper">
     <h2>Basic Template</h2>
@@ -43,12 +50,22 @@
     <p>
       Been looking around for a CSS/JS Windows 8 Modal, could have skinned other modals just to look like this. Made this from scratch for personal purposes. 'CSS transforms' centers the modal vertically. Depends on jQuery. The CSS file doesn't include normalize or reset.
     </p>   
+    <p class="t-right">
+      <a href="https://ace-subido.github.com/windows8-metro-modal" class="mbtn blue">See on Github</a>
+      <a href="https://github.com/ace-subido/windows8-metro-modal/archive/master.zip" class="mbtn green">Download</a>
+    </p>
     <p>
       Made by Ace Subido | <a href="http://acesubido.com">http://acesubido.com</a>
     </p>
+    <p class="t-center">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ace-subido.github.io/windows8-metro-modal/" data-text="CSS/JS project for recreating the Windows 8 Modal">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <iframe src="http://ghbtns.com/github-btn.html?user=ace-subido&repo=windows8-metro-modal&type=watch&count=true"
+        allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+    </p>
   </div>  
   <div class="win8modal">
-    <div class="wrapper">
+    <div class="wrapper m-wrapper">
       <p>
         To close the modal, click the 'Close Modal' button below. <br>
         Clicking outside the modal also closes the modal. <br>
@@ -62,7 +79,18 @@
     $(document).ready( function(){
       $('code').parent('pre').addClass('prettyprint');
       prettyPrint();
-    });
+    });    
   </script>
+  <script type="text/javascript">                  
+    var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32915822-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();        
+    </script>
 </body>
 </html>

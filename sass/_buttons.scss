@@ -30,8 +30,11 @@ input::-moz-focus-inner {
   font-size: 16px;
   line-height: 1.5em;
   border-radius: 0px;
+  font-weight: 700;
+  text-decoration: none;
 
   @include user-select(none);
+  @include transition(all 0.1s ease-in);
 
   &:focus {
     outline: thin dotted #333;
@@ -62,16 +65,37 @@ input::-moz-focus-inner {
 }
 
 .violet {
-  color: lighten(#442359, 20%);
-  border: 3px solid lighten(#442359, 20%);
+  color: #7c40a2;
+  border: 3px solid #7c40a2;
   background-color: #fff;
-  font-weight: 700;
+  
+  &:hover,
+  &:focus {
+    background-color: #7c40a2;
+    color: #fff;
+  }  
+}
 
-  @include transition(all 0.1s ease-in);
+.green {
+  color: #35aa47;
+  border: 3px solid #35aa47;
+  background-color: #fff;
 
   &:hover,
   &:focus {
-    background-color: lighten(#442359, 20%);
+    background-color: #35aa47;
+    color: #fff;
+  }  
+}
+
+.blue {
+  color: #4d90fe;
+  border: 3px solid #4d90fe;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: #4d90fe;
     color: #fff;
   }  
 }

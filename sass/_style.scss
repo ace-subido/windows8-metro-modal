@@ -68,15 +68,35 @@ h2 {
 
 .wrapper {
   display: block;
-  margin: 40px auto;
   width: 740px;
+  margin: 0 auto;
 
   @include clearfix;
 
+  &.m-wrapper {
+    margin: 40px auto;
+  }
+
+  .t-center {
+    text-align: center;
+  }
+
+  .t-right {    
+    text-align: right;
+
+    a {
+      margin-left: 6px;
+    }
+  }
 }
 
 .header {
   text-align: center;
+  margin: 40px auto 0px;
+
+  p {
+    margin-bottom: 10px;
+  }
 
   h1 {    
     font-weight: 400;

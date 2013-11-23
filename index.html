@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Windows 8 Modal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://google-code-prettify.googlecode.com/svn/trunk/styles/sunburst.css">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/win8modal.css" type="text/css" />
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
+  <script src="js/win8modal.js"></script>  
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+</head>
+<body>
+  <div class="wrapper header">    
+    <h1>CSS3 Windows 8 Modal</h1>
+    <p class="sub-head">
+      A simple Windows 8 modal. Click the button below to check it out.
+    </p>
+    <button class="mbtn violet" onclick="Win8Modal.show()">
+      Open Modal
+    </button>
+  </div>
+  <div class="wrapper">
+    <h2>Basic Template</h2>
+    <pre>
+      <code>
+  &lt;link rel="stylesheet" href="css/win8modal.css" type="text/css" /&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;  
+  &lt;script src="js/win8modal.js"&gt; &lt;/script&gt; 
+
+  &lt;button type="button" onclick="Win8Modal.show()"&gt;
+    Open Modal
+  &lt;/button&gt;
+
+  &lt;div class="win8modal"&gt;
+    &lt;button type="button" onclick="Win8Modal.close()"&gt;Close Modal&lt;/button&gt;
+  &lt;/div&gt;     
+  &lt;div class='win8modal-cover'&gt;&lt;/div&gt;</code>    
+    </pre>
+    <p>
+      Been looking around for a CSS/JS Windows 8 Modal, could have skinned other modals just to look like this. Made this from scratch for personal purposes. 'CSS transforms' centers the modal vertically. Depends on jQuery. The CSS file doesn't include normalize or reset.
+    </p>   
+    <p>
+      Made by Ace Subido | <a href="http://acesubido.com">http://acesubido.com</a>
+    </p>
+  </div>  
+  <div class="win8modal">
+    <div class="wrapper">
+      <p>
+        To close the modal, click the 'Close Modal' button below. <br>
+        Clicking outside the modal also closes the modal. <br>
+        You can also hit the ESC to close this modal.
+      </p>      
+      <button type="button" class="mbtn violet left" onclick="Win8Modal.close()">Close Modal</button>
+    </div>    
+  </div>        
+  <div class='win8modal-cover'></div>
+  <script type="text/javascript">
+    $(document).ready( function(){
+      $('code').parent('pre').addClass('prettyprint');
+      prettyPrint();
+    });
+  </script>
+</body>
+</html>

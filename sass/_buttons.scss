@@ -1,0 +1,78 @@
+
+button {
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.mbtn {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;  
+  white-space: nowrap;
+  padding: 2px 12px 3px;
+  font-size: 16px;
+  line-height: 1.5em;
+  border-radius: 0px;
+
+  @include user-select(none);
+
+  &:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #333333;
+    text-decoration: none;
+  }
+
+  &:active {
+    outline: 0;
+    background-image: none;    
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.violet {
+  color: lighten(#442359, 20%);
+  border: 3px solid lighten(#442359, 20%);
+  background-color: #fff;
+  font-weight: 700;
+
+  @include transition(all 0.1s ease-in);
+
+  &:hover,
+  &:focus {
+    background-color: lighten(#442359, 20%);
+    color: #fff;
+  }  
+}
+

@@ -8,28 +8,28 @@ A small CSS/JS library to recreate the simple Windows 8 Modal. Been looking arou
 Usage
 ====================
 
-				<link rel="stylesheet" href="css/win8modal.css" type="text/css" />
-				<script src="http://code.jquery.com/jquery-latest.min.js"></script>  
-				<script src="js/win8modal.js"></script> 
+		<link rel="stylesheet" href="css/win8modal.css" type="text/css" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>  
+		<script src="js/win8modal.js"></script> 
 
-				<button type="button" onclick="Win8Modal.show()">
-				  Open Modal
-				</button>
+		<button type="button" onclick="Win8Modal.show()">
+		  Open Modal
+		</button>
 
-				<div class="win8modal">
-				  <button type="button" onclick="Win8Modal.close()">Close Modal</button>
-				</div>     
-				<div class='win8modal-cover'></div>
+		<div class="win8modal">
+		  <button type="button" onclick="Win8Modal.close()">Close Modal</button>
+		</div>     
+		<div class='win8modal-cover'></div>
 
 Pretty straight forward :) 
 
 This opens the Modal
 
-				Win8Modal.close()
+		Win8Modal.close()
 
 This closes the Modal
 				
-				Win8Modal.show()
+		Win8Modal.show()
 
 License
 ====================

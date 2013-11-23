@@ -1,6 +1,4 @@
 var Win8Modal = (function($) {
-	var cover, main;
-
 	var onEscapeHandler = function(e) {
 		if(e.keyCode === 27)
 			close();

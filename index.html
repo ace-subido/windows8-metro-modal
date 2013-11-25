@@ -71,7 +71,7 @@
         Clicking outside the modal also closes the modal. <br/>
         You can also hit the ESC to close this modal.
       </p>      
-      <button type="button" class="mbtn violet left" onclick="Win8Modal.close()">Close Modal</button>
+      <button type="button" class="mbtn violet right">Close Modal</button>
     </div>    
   </div>        
   <div class='win8modal-cover'></div>
@@ -80,6 +80,8 @@
       $('code').parent('pre').addClass('prettyprint');
       prettyPrint();
     });    
+
+    Win8Modal.install('#win8modal-btn');
   </script>
   <script type="text/javascript">                  
     var _gaq = _gaq || [];

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Windows 8 Modal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +23,9 @@
       A simple Windows 8 modal. Click the 'Open Modal' button below to check it out.
     </p>
     <p>      
-      <button class="mbtn violet" data-wm-role="open">
+      <a class="mbtn violet" data-wm-role="open">
         Open Modal
-      </button>      
+      </a>      
     </p>    
   </div>
   <div class="wrapper">
@@ -39,12 +39,12 @@
   &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;  
   &lt;script src="js/win8modal.js"&gt; &lt;/script&gt; 
 
-  &lt;button type="button" data-wm-role="open"&gt;
+  &lt;a data-wm-role="open"&gt;
     Open Modal
-  &lt;/button&gt;
+  &lt;/a&gt;
 
   &lt;div class="win8modal"&gt;
-    &lt;button type="button" data-wm-role="close"&gt;Close Modal&lt;/button&gt;
+    &lt;a data-wm-role="close"&gt;Close Modal&lt;/a&gt;
   &lt;/div&gt;     
   &lt;div class='win8modal-cover'&gt;&lt;/div&gt;
   &lt;script type="text/javascript"&gt;
@@ -79,14 +79,15 @@
   <div class="win8modal">
     <div class="wrapper m-wrapper">
       <p>
-        To close the modal, click the 'Close Modal' button below. <br>
-        Clicking outside the modal also closes the modal. <br>
+        To close the modal, click the 'Close Modal' button below. <br/>
+        Clicking outside the modal also closes the modal. <br/>
         You can also hit the ESC to close this modal.
       </p>      
+
       <p>
         If you like this, also check out <a href="https://github.com/ace-subido/css3-microsoft-metro-buttons">CSS Microsoft Metro Buttons</a>
       </p>
-      <button type="button" class="mbtn violet left" data-wm-role="close">Close Modal</button>
+      <a class="mbtn violet right" data-wm-role="close">Close Modal</a>
     </div>    
   </div>        
   <div class='win8modal-cover'></div>

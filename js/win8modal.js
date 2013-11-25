@@ -35,9 +35,15 @@ var Win8Modal = (function($) {
 		$("*[data-wm-role='close']").bind('click touchstart', close);
 	}
 
+	function uninstall() {
+		$("*[data-wm-role='open']").unbind('click touchstart', show);		
+		$("*[data-wm-role='close']").unbind('click touchstart', close);
+	}
+
 	return {
 		show: show,
 		close: close,
-		install: install
+		install: install,
+		uninstall: uninstall
 	}	
 })(jQuery);

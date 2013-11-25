@@ -8,26 +8,22 @@ var Win8Modal = (function($) {
 		close();
 	}
 
-	function show() {		
+	function show(e) {		
 		$('html').toggleClass('win8modal-active');	
 
 		var cover = $('.win8modal-cover');		
 		cover.bind('click touchstart', onCoverClickHandler);
 
 		$(document).bind('keyup', onEscapeHandler);
-
-		return false;
 	}
 
-	function close() {
+	function close(e) {
 		$('html').toggleClass('win8modal-active');
 
 		var cover = $('.win8modal-cover');		
 		cover.unbind('click touchstart', onCoverClickHandler);
 
 		$(document).unbind('keyup', onEscapeHandler);
-
-		return false;
 	}
 
 	function install() {

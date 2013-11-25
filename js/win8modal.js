@@ -12,9 +12,9 @@ var Win8Modal = (function($) {
 		$('html').toggleClass('win8modal-active');	
 
 		var cover = $('.win8modal-cover');		
-		cover.on('click touchstart', onCoverClickHandler);
+		cover.bind('click touchstart', onCoverClickHandler);
 
-		$(document).on('keyup', onEscapeHandler);
+		$(document).bind('keyup', onEscapeHandler);
 
 		return false;
 	}
@@ -31,8 +31,8 @@ var Win8Modal = (function($) {
 	}
 
 	function install() {
-		$("*[data-wm-role='open']").on('click touchstart', show);		
-		$("*[data-wm-role='close']").on('click touchstart', close);
+		$("*[data-wm-role='open']").bind('click touchstart', show);		
+		$("*[data-wm-role='close']").bind('click touchstart', close);
 	}
 
 	return {

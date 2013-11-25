@@ -9,10 +9,10 @@ var Win8Modal = (function($) {
 	}
 
 	function show() {		
-		$('html').toggleClass('win8modal-active');		
-		
-		$('.win8modal-cover').on('click', onCoverClickHandler);
-		$('.win8modal-cover').on('touchstart', onCoverClickHandler);		
+		$('html').toggleClass('win8modal-active');	
+
+		var cover = $('.win8modal-cover');		
+		cover.on('click touchstart', onCoverClickHandler);
 
 		$(document).on('keyup', onEscapeHandler);
 
@@ -22,16 +22,22 @@ var Win8Modal = (function($) {
 	function close() {
 		$('html').toggleClass('win8modal-active');
 
-		$('.win8modal-cover').unbind('click', onCoverClickHandler);
-		$('.win8modal-cover').unbind('touchstart', onCoverClickHandler);
+		var cover = $('.win8modal-cover');		
+		cover.unbind('click touchstart', onCoverClickHandler);
 
 		$(document).unbind('keyup', onEscapeHandler);
 
 		return false;
 	}
 
+	function install() {
+		$("*[data-wm-role='open']").on('click touchstart', show);		
+		$("*[data-wm-role='close']").on('click touchstart', close);
+	}
+
 	return {
 		show: show,
-		close: close
+		close: close,
+		install: install
 	}	
 })(jQuery);

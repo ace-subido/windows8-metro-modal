@@ -10,26 +10,36 @@ Basic Template and Usage
 
 It's pretty straightforward :)
 
-    <link rel="stylesheet" href="css/win8modal.css" type="text/css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
-    <script src="js/win8modal.js"></script> 
+		<link rel="stylesheet" href="css/win8modal.css" type="text/css" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>  
+		<script src="js/win8modal.js"> </script> 
 
-    <button type="button" onclick="Win8Modal.show()">
-      Open Modal
-    </button>
+		<button type="button" data-wm-role="open">
+		  Open Modal
+		</button>
 
-    <div class="win8modal">
-      <button type="button" onclick="Win8Modal.close()">Close Modal</button>
-    </div>     
-    <div class='win8modal-cover'></div>
+		<div class="win8modal">
+		  <button type="button" data-wm-role="close">Close Modal</button>
+		</div>     
+		<div class='win8modal-cover'></div>
+		<script type="text/javascript">
+		  Win8Modal.install();
+		</script>
 
 This opens the Modal
 
-    Win8Modal.close()
+		Win8Modal.close()
 
 This closes the Modal
 				
-    Win8Modal.show()
+		Win8Modal.show()
+
+This installs event handlers to elements with the _data-wm-role_ attribute. Elements with the <strong>data-wm-role</strong> are binded with event handlers that open and close the modal. 
+
+		Win8Modal.install()
+
+		data-wm-role='open' — for buttons that open the modal
+    data-wm-role='close' — for buttons that close the modal
 
 License
 ====================

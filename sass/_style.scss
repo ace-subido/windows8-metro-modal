@@ -66,6 +66,22 @@ h2 {
   margin-bottom: 20px;    
 }  
 
+a {
+  color: #4d90fe;
+  text-decoration: none;
+  @include transition(all 0.2s ease-out);
+
+  &:hover {
+    color: darken(#4d90fe, 40%);
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #4d90fe;
+    text-decoration: none;
+  }
+}
+
 .wrapper {
   display: block;
   width: 740px;
@@ -84,15 +100,55 @@ h2 {
   .t-right {    
     text-align: right;
 
-    a {
+    a.mbtns {
       margin-left: 6px;
     }
   }
 }
 
+.methods {
+  display: block;
+  width: 440px;
+  margin: 20px auto;
+
+  ul {
+    li {
+      list-style-type: none;
+      padding: 6px 12px;   
+      cursor: default;
+
+      &:hover {
+        background-color: #eee;
+      } 
+    }
+  }
+
+  ul.second {
+    margin-top: 5px;
+    li {
+      list-style-type: disc;
+      margin-left: 20px;
+      padding: 0px;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  strong {
+    font-weight: 700;
+
+    &.emph {   
+      color: #7c40a2;
+    }
+  }  
+}
+
 .header {
   text-align: center;
-  margin: 40px auto 0px;
+  margin: 40px auto 20px;
 
   p {
     margin-bottom: 10px;

@@ -23,33 +23,54 @@
       A simple Windows 8 modal. Click the 'Open Modal' button below to check it out.
     </p>
     <p>      
-      <button class="mbtn violet" onclick="Win8Modal.show()">
+      <button class="mbtn violet" data-wm-role="open">
         Open Modal
       </button>      
     </p>    
   </div>
   <div class="wrapper">
-    <h2>Basic Template</h2>
+    <p>
+      Been looking around for a CSS/JS Windows 8 Modal, could have skinned other modals just to look like this. Made this from scratch for personal purposes. 'CSS transforms' centers the modal vertically. Depends on jQuery. The CSS file doesn't include normalize or reset.
+    </p>   
+    <h2>Basic Template and Usage</h2>
     <pre>
       <code>
   &lt;link rel="stylesheet" href="css/win8modal.css" type="text/css" /&gt;
   &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;  
   &lt;script src="js/win8modal.js"&gt; &lt;/script&gt; 
 
-  &lt;button type="button" onclick="Win8Modal.show()"&gt;
+  &lt;button type="button" data-wm-role="open"&gt;
     Open Modal
   &lt;/button&gt;
 
   &lt;div class="win8modal"&gt;
-    &lt;button type="button" onclick="Win8Modal.close()"&gt;Close Modal&lt;/button&gt;
+    &lt;button type="button" data-wm-role="close"&gt;Close Modal&lt;/button&gt;
   &lt;/div&gt;     
-  &lt;div class='win8modal-cover'&gt;&lt;/div&gt;</code>    
+  &lt;div class='win8modal-cover'&gt;&lt;/div&gt;
+  &lt;script type="text/javascript"&gt;
+    Win8Modal.install();
+  &lt;/script&gt;</code>    
     </pre>
-    <p>
-      Been looking around for a CSS/JS Windows 8 Modal, could have skinned other modals just to look like this. Made this from scratch for personal purposes. 'CSS transforms' centers the modal vertically. Depends on jQuery. The CSS file doesn't include normalize or reset.
-    </p>   
+    <div class="methods">
+      <ul>
+        <li>
+          <strong>Win8Modal</strong><strong class="emph">.show()</strong> — shows the modal      
+        </li>
+        <li>
+          <strong>Win8Modal</strong><strong class="emph">.close()</strong> — hides the modal
+        </li>
+        <li>
+          <strong>Win8Modal</strong><strong class="emph">.install()</strong> — elements with the <strong>data-wm-role</strong> are binded with event handlers that open and close the modal. 
+
+          <ul class="second">
+            <li><strong>data-wm-role='open'</strong> — for buttons that open the modal</li>
+            <li><strong>data-wm-role='close'</strong> — for buttons that close the modal</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <p class="t-right">
-      <a href="https://github.com/ace-subido/windows8-metro-modal" class="mbtn blue">See on Github</a>
+      <a href="https://github.com/ace-subido/windows8-metro-modal" class="mbtn blue mbtns">See on Github</a>
     </p>
     <p>
       Made by Ace Subido | <a href="http://acesubido.com">http://acesubido.com</a>
@@ -62,7 +83,10 @@
         Clicking outside the modal also closes the modal. <br>
         You can also hit the ESC to close this modal.
       </p>      
-      <button type="button" class="mbtn violet left" onclick="Win8Modal.close()">Close Modal</button>
+      <p>
+        If you like this, also check out <a href="https://github.com/ace-subido/css3-microsoft-metro-buttons">CSS Microsoft Metro Buttons</a>
+      </p>
+      <button type="button" class="mbtn violet left" data-wm-role="close">Close Modal</button>
     </div>    
   </div>        
   <div class='win8modal-cover'></div>
@@ -70,6 +94,8 @@
     $(document).ready( function(){
       $('code').parent('pre').addClass('prettyprint');
       prettyPrint();
+
+      Win8Modal.install();
     });    
   </script>
 </body>

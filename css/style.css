@@ -137,6 +137,19 @@ h2 {
   font-weight: 700;
   margin-bottom: 20px; }
 
+a {
+  color: #4d90fe;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+  a:hover {
+    color: #01307e;
+    text-decoration: none; }
+  a:visited {
+    color: #4d90fe;
+    text-decoration: none; }
+
 .wrapper {
   display: block;
   width: 740px;
@@ -153,12 +166,36 @@ h2 {
     text-align: center; }
   .wrapper .t-right {
     text-align: right; }
-    .wrapper .t-right a {
+    .wrapper .t-right a.mbtns {
       margin-left: 6px; }
+
+.methods {
+  display: block;
+  width: 440px;
+  margin: 20px auto; }
+  .methods ul li {
+    list-style-type: none;
+    padding: 6px 12px;
+    cursor: default; }
+    .methods ul li:hover {
+      background-color: #eee; }
+  .methods ul.second {
+    margin-top: 5px; }
+    .methods ul.second li {
+      list-style-type: disc;
+      margin-left: 20px;
+      padding: 0px;
+      background-color: transparent; }
+      .methods ul.second li:hover {
+        background-color: transparent; }
+  .methods strong {
+    font-weight: 700; }
+    .methods strong.emph {
+      color: #7c40a2; }
 
 .header {
   text-align: center;
-  margin: 40px auto 0px; }
+  margin: 40px auto 20px; }
   .header p {
     margin-bottom: 10px; }
   .header h1 {

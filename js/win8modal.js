@@ -1,5 +1,4 @@
-var Win8Modal = (function(){
-
+var Win8Modal = (function() {
 	var container = document.documentElement,
 		popup = document.querySelector('.win8modal'),
 		cover = document.querySelector('.win8modal-cover');		
@@ -47,7 +46,7 @@ var Win8Modal = (function(){
 		activate();
 		return this;
 	}
-	
+
 	function hide() {
 		deactivate();
 	}

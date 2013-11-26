@@ -1,11 +1,11 @@
 @import 'bourbon/bourbon';
 
 .win8modal-active {	
-	@include transition(all 0.2s ease-out);
+	@include transition(opacity 0.2s ease-out);
 
 	.win8modal-cover,
 	.win8modal {
-		@include transition(all 0.2s ease-out);
+		@include transition(opacity 0.2s ease-out);
 
 		visibility: visible;
 		opacity: 1;

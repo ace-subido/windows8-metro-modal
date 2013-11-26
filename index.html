@@ -23,9 +23,9 @@
       A simple Windows 8 modal. Click the 'Open Modal' button below to check it out.
     </p>
     <p>      
-      <a class="mbtn violet" data-wm-role="open">
+      <button type="button" class="mbtn violet" onclick="Win8Modal.show()" data-wm-role="open">
         Open Modal
-      </a>      
+      </button>      
     </p>    
   </div>
   <div class="wrapper">
@@ -87,8 +87,8 @@
 
       <p>
         If you like this, also check out <a href="https://github.com/ace-subido/css3-microsoft-metro-buttons">CSS Microsoft Metro Buttons</a>
-      </p>
-      <a class="mbtn violet right" data-wm-role="close">Close Modal</a>
+      </p>      
+      <button type="button" class="mbtn violet right" onclick="Win8Modal.show()" data-wm-role="close">Close Modal</button>
     </div>    
   </div>        
   <div class='win8modal-cover'></div>
@@ -96,8 +96,6 @@
     $(document).ready( function(){
       $('code').parent('pre').addClass('prettyprint');
       prettyPrint();
-
-      Win8Modal.install();
     });    
           
     var _gaq = _gaq || [];

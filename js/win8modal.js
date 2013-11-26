@@ -1,21 +1,19 @@
 var Win8Modal = (function() {
-	var container = document.documentElement,
-		popup = document.querySelector('.win8modal'),
-		cover = document.querySelector('.win8modal-cover');		
+	var container, popup, cover;	
 
-	function onDocumentKeyUp( event ) {
+	function onDocumentKeyUp(event) {
 		if(event.keyCode === 27) {
 			deactivate();
 		}
 	}
-
-	function onDocumentClick(event) {
+	
+	function onDocumentClick(event) {	
 		if(event.target === cover) {
 			deactivate();
 		}
 	}
 
-	function activate( state ) {
+	function activate() {
 		document.addEventListener('keyup', onDocumentKeyUp, false);
 		document.addEventListener('click', onDocumentClick, false);
 		document.addEventListener('touchstart', onDocumentClick, false);
@@ -42,12 +40,14 @@ var Win8Modal = (function() {
 	}
 
 	function show(selector){
+		container = document.documentElement;
 		popup = document.querySelector('.win8modal');
+		cover = document.querySelector('.win8modal-cover');
 		activate();
 		return this;
 	}
 
-	function hide() {
+	function close() {
 		deactivate();
 	}
 
@@ -55,7 +55,7 @@ var Win8Modal = (function() {
 		activate: activate,
 		deactivate: deactivate,
 		show: show,
-		hide: hide
+		close: close
 	}
 
 })();

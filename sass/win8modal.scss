@@ -45,3 +45,8 @@
 	@include transform(translateY(-50%));
 	@include transition(all 0.2s ease-out);
 }
+
+*[data-wm-role='open'],
+*[data-wm-role='close'] {
+	cursor: pointer;
+}

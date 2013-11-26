@@ -23,9 +23,9 @@
       A simple Windows 8 modal. Click the 'Open Modal' button below to check it out.
     </p>
     <p>      
-      <a class="mbtn violet" data-wm-role="open">
+      <button type="button" class="mbtn violet" onclick="Win8Modal.show()" data-wm-role="open">
         Open Modal
-      </a>      
+      </button>      
     </p>    
   </div>
   <div class="wrapper">
@@ -71,6 +71,7 @@
     </div>
     <p class="t-right">
       <a href="https://github.com/ace-subido/windows8-metro-modal" class="mbtn blue mbtns">See on Github</a>
+      <a href="https://github.com/ace-subido/windows8-metro-modal/archive/1.1.zip" class="mbtn green mbtns">Download</a>
     </p>
     <p>
       Made by Ace Subido | <a href="http://acesubido.com">http://acesubido.com</a>
@@ -86,8 +87,8 @@
 
       <p>
         If you like this, also check out <a href="https://github.com/ace-subido/css3-microsoft-metro-buttons">CSS Microsoft Metro Buttons</a>
-      </p>
-      <a class="mbtn violet right" data-wm-role="close">Close Modal</a>
+      </p>      
+      <button type="button" class="mbtn violet right" onclick="Win8Modal.close()" data-wm-role="close">Close Modal</button>
     </div>    
   </div>        
   <div class='win8modal-cover'></div>
@@ -95,9 +96,18 @@
     $(document).ready( function(){
       $('code').parent('pre').addClass('prettyprint');
       prettyPrint();
-
-      Win8Modal.install();
     });    
+          
+    var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32915822-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })(); 
+    
   </script>
 </body>
 </html>

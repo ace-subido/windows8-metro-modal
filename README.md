@@ -10,21 +10,21 @@ Basic Template and Usage
 
 It's pretty straightforward :)
 
-	  <link rel="stylesheet" href="css/win8modal.css" type="text/css" />
-	  <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
-	  <script src="js/win8modal.js"> </script> 
-  
-	  <button type="button" data-wm-role="open">
-	    Open Modal
-	  </button>
+    <link rel="stylesheet" href="css/win8modal.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
+    <script src="js/win8modal.js"> </script> 
 
-	  <div class="win8modal">
-	    <button type="button" data-wm-role="close">Close Modal</button>
-	  </div>     
-	  <div class='win8modal-cover'></div>
-	  <script type="text/javascript">
-		  Win8Modal.install();
-	  </script>
+    <button type="button" data-wm-role="open">
+      Open Modal
+    </button>
+
+    <div class="win8modal">
+      <button type="button" data-wm-role="close">Close Modal</button>
+    </div>     
+    <div class='win8modal-cover'></div>
+    <script type="text/javascript">
+      Win8Modal.install();
+    </script>
 
 This opens the Modal
 
@@ -32,7 +32,7 @@ This opens the Modal
 
 This closes the Modal
 				
-		Win8Modal.show()
+    Win8Modal.show()
 
 This installs event handlers to elements with the _data-wm-role_ attribute. Elements with the <strong>data-wm-role</strong> are binded with event handlers that open and close the modal. 
 

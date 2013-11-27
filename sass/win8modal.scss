@@ -13,7 +13,7 @@
 }
 
 .win8modal-cover {		
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -28,7 +28,7 @@
 
 .win8modal {
 	display: block;	
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 0;	
 	width: 100%;

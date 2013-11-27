@@ -1,5 +1,5 @@
 var Win8Modal = (function() {
-	var container, popup, cover;	
+	var container, popup, cover, openBtn, closeBtn;	
 
 	function onDocumentKeyUp(event) {
 		if(event.keyCode === 27) {
@@ -51,10 +51,31 @@ var Win8Modal = (function() {
 		deactivate();
 	}
 
+	function install() {
+		openBtn = document.querySelector("*[data-wm-role='open']");
+		closeBtn = document.querySelector("*[data-wm-role='close']");
+
+		openBtn.addEventListener('click', show, false);
+		openBtn.addEventListener('touchstart', show, false);
+
+		closeBtn.addEventListener('click', close, false);
+		closeBtn.addEventListener('touchstart', close, false);
+	}
+
+	function uninstall() {
+		openBtn.removeEventListener('click', show, false);
+		openBtn.removeEventListener('touchstart', show, false);
+
+		closeBtn.removeEventListener('click', close, false);
+		closeBtn.removeEventListener('touchstart', close, false);
+	}
+
 	return {
 		activate: activate,
 		deactivate: deactivate,
 		show: show,
-		close: close
+		close: close,
+		install: install,
+		uninstall: uninstall
 	}
 })();

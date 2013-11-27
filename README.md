@@ -23,7 +23,7 @@ It's pretty straightforward :)
 		</div>     
 		<div class='win8modal-cover'></div>
 		<script type="text/javascript">
-		  Win8Modal.install();
+			Win8Modal.install();
 		</script>
 
 This opens the Modal

@@ -23,7 +23,7 @@ It's pretty straightforward :)
 		</div>     
 		<div class='win8modal-cover'></div>
 		<script type="text/javascript">
-		  Win8Modal.install();
+			Win8Modal.install();
 		</script>
 
 This opens the Modal
@@ -40,6 +40,10 @@ This installs event handlers to elements with the _data-wm-role_ attribute. Elem
 
 		data-wm-role='open' — for buttons that open the modal
     data-wm-role='close' — for buttons that close the modal
+
+This uninstalls those event handlers
+		
+		Win8Modal.uninstall()
 
 License
 ====================

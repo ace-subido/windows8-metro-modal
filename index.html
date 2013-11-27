@@ -34,20 +34,26 @@
     <h2>Basic Template and Usage</h2>
     <pre>
       <code>
-  &lt;link rel="stylesheet" href="css/win8modal.css" type="text/css" /&gt;
-  &lt;script src="js/win8modal.js"&gt; &lt;/script&gt; 
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;link rel="stylesheet" href="css/win8modal.css" type="text/css" /&gt;
+      &lt;script src="js/win8modal.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;button type="button" data-wm-role="open"&gt;
+        Open Modal
+      &lt;/button&gt;
 
-  &lt;button type="button" data-wm-role="open"&gt;
-    Open Modal
-  &lt;/button&gt;
-
-  &lt;div class="win8modal"&gt;
-    &lt;button type="button" data-wm-role="close"&gt;Close Modal&lt;/button&gt;
-  &lt;/div&gt;     
-  &lt;div class='win8modal-cover'&gt;&lt;/div&gt;
-  &lt;script type="text/javascript"&gt;
-    Win8Modal.install();
-  &lt;/script&gt;</code>    
+      &lt;div class="win8modal"&gt;
+        &lt;button type="button" data-wm-role="close"&gt;Close Modal&lt;/button&gt;
+      &lt;/div&gt;     
+      &lt;div class='win8modal-cover'&gt;&lt;/div&gt;
+      &lt;script type="text/javascript"&gt;
+        Win8Modal.install();
+      &lt;/script&gt;    
+    &lt;/body&gt;
+  &lt;/html&gt;</code>    
     </pre>
     <div class="methods">
       <ul>
@@ -108,8 +114,8 @@
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })(); 
-    
+      })();     
+
   </script>
 </body>
 </html>

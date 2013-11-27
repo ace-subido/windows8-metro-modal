@@ -57,7 +57,7 @@ input::-moz-focus-inner {
   color: #7c40a2;
   border: 3px solid #7c40a2;
   background-color: #fff; }
-  .violet:hover, .violet:focus {
+  .violet:hover, .violet:focus, .violet:active {
     background-color: #7c40a2;
     color: #fff; }
 
@@ -65,7 +65,7 @@ input::-moz-focus-inner {
   color: #35aa47;
   border: 3px solid #35aa47;
   background-color: #fff; }
-  .green:hover, .green:focus {
+  .green:hover, .green:focus, .green:active {
     background-color: #35aa47;
     color: #fff; }
 
@@ -73,7 +73,7 @@ input::-moz-focus-inner {
   color: #4d90fe;
   border: 3px solid #4d90fe;
   background-color: #fff; }
-  .blue:hover, .blue:focus {
+  .blue:hover, .blue:focus, .blue:active {
     background-color: #4d90fe;
     color: #fff; }
 
@@ -208,7 +208,7 @@ a {
     font-size: 20px;
     margin-bottom: 30px; }
 
-.left {
+.right {
   float: right; }
 
 pre.prettyprint {

@@ -1,43 +1,81 @@
-var Win8Modal = (function($) {
-	var onEscapeHandler = function(e) {
-		if(e.keyCode === 27)
-			close();
+var Win8Modal = (function() {
+	var container, popup, cover, openBtn, closeBtn;	
+
+	function onDocumentKeyUp(event) {
+		if(event.keyCode === 27) {
+			deactivate();
+		}
+	}
+	
+	function onDocumentClick(event) {	
+		if(event.target === cover) {
+			deactivate();
+		}
 	}
 
-	var onCoverClickHandler = function() {		
-		close();
+	function activate() {
+		document.addEventListener('keyup', onDocumentKeyUp, false);
+		document.addEventListener('click', onDocumentClick, false);
+		document.addEventListener('touchstart', onDocumentClick, false);
+
+		setTimeout( function() {
+			addClass(container, 'win8modal-active');
+		}, 0 );
 	}
 
-	function show() {		
-		$('html').toggleClass('win8modal-active');	
+	function deactivate() {
+		document.removeEventListener('keyup', onDocumentKeyUp, false);
+		document.removeEventListener('click', onDocumentClick, false);
+		document.removeEventListener('touchstart', onDocumentClick, false);
 
-		var cover = $('.win8modal-cover');		
-		cover.on('click touchstart', onCoverClickHandler);
+		removeClass(container, 'win8modal-active');
+	}	
 
-		$(document).on('keyup', onEscapeHandler);
+	function addClass(element, name) {
+		element.className = element.className.replace( /\s+$/gi, '' ) + ' ' + name;
+	}
 
-		return false;
+	function removeClass(element, name) {
+		element.className = element.className.replace(name, '');
+	}
+
+	function show(){
+		container = document.documentElement;
+		popup = document.querySelector('.win8modal');
+		cover = document.querySelector('.win8modal-cover');
+		activate();
+		return this;
 	}
 
 	function close() {
-		$('html').toggleClass('win8modal-active');
-
-		var cover = $('.win8modal-cover');		
-		cover.unbind('click touchstart', onCoverClickHandler);
-
-		$(document).unbind('keyup', onEscapeHandler);
-
-		return false;
+		deactivate();
 	}
 
 	function install() {
-		$("*[data-wm-role='open']").on('click touchstart', show);		
-		$("*[data-wm-role='close']").on('click touchstart', close);
+		openBtn = document.querySelector("*[data-wm-role='open']");
+		closeBtn = document.querySelector("*[data-wm-role='close']");
+
+		openBtn.addEventListener('click', show, false);
+		openBtn.addEventListener('touchstart', show, false);
+
+		closeBtn.addEventListener('click', close, false);
+		closeBtn.addEventListener('touchstart', close, false);
+	}
+
+	function uninstall() {
+		openBtn.removeEventListener('click', show, false);
+		openBtn.removeEventListener('touchstart', show, false);
+
+		closeBtn.removeEventListener('click', close, false);
+		closeBtn.removeEventListener('touchstart', close, false);
 	}
 
 	return {
+		activate: activate,
+		deactivate: deactivate,
 		show: show,
 		close: close,
-		install: install
-	}	
-})(jQuery);
+		install: install,
+		uninstall: uninstall
+	}
+})();

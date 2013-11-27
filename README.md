@@ -10,26 +10,26 @@ Basic Template and Usage
 
 It's pretty straightforward :)
 
-	  <!DOCTYPE html>
-		<html>
-		  <head>
-		    <link rel="stylesheet" href="css/win8modal.css" type="text/css" />
-		    <script src="js/win8modal.js"></script>
-		  </head>
-		  <body>
-		    <button type="button" data-wm-role="open">
-		      Open Modal
-		    </button>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <link rel="stylesheet" href="css/win8modal.css" type="text/css" />
+      <script src="js/win8modal.js"></script>
+    </head>
+    <body>
+      <button type="button" data-wm-role="open">
+        Open Modal
+      </button>
 
-		    <div class="win8modal">
-		      <button type="button" data-wm-role="close">Close Modal</button>
-		    </div>     
-		    <div class='win8modal-cover'></div>
-		    <script type="text/javascript">
-		      Win8Modal.install();
-		    </script>    
-		  </body>
-		</html>
+      <div class="win8modal">
+        <button type="button" data-wm-role="close">Close Modal</button>
+      </div>     
+      <div class='win8modal-cover'></div>
+      <script type="text/javascript">
+        Win8Modal.install();
+      </script>    
+    </body>
+    </html>
 
 This opens the Modal
 

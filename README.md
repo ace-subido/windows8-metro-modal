@@ -31,8 +31,8 @@ This opens the Modal
     Win8Modal.close()
 
 This closes the Modal
-				
-		Win8Modal.show()
+
+    Win8Modal.show()
 
 This installs event handlers to elements with the _data-wm-role_ attribute. Elements with the <strong>data-wm-role</strong> are binded with event handlers that open and close the modal. 
 

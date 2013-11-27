@@ -3,7 +3,7 @@ Windows 8 Modal
 
 [https://ace-subido.github.com/windows8-metro-modal](https://ace-subido.github.com/windows8-metro-modal)
 
-A small CSS/JS library to recreate the simple Windows 8 Modal. Been looking around for a CSS/JS Windows 8 Modal, could have skinned other modals just to look like this. Made this from scratch for personal purposes. 'CSS transforms' centers the modal vertically. Doesn't depend on jQuery. The CSS file doesn't include normalize or reset. Parts of the js code is inspired from [Hakim's Avgrund](http://lab.hakim.se/avgrund/)
+A small CSS/JS library to recreate the simple Windows 8 Modal. Been looking around for a CSS/JS Windows 8 Modal, could have skinned other modals just to look like this. Made this from scratch for personal purposes. 'CSS transforms' centers the modal vertically. Doesn't depend on jQuery. The CSS file doesn't include normalize or reset. Parts of the js code are inspired from [Hakim's Avgrund](http://lab.hakim.se/avgrund/)
 
 Basic Template and Usage
 ====================
